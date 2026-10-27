@@ -45,8 +45,8 @@ try {
   fail(`브랜드 또는 프로그램 목록을 읽을 수 없습니다. ${error.message}`);
 }
 
-if (brand?.name !== "Nextbridge") fail("브랜드 이름은 Nextbridge여야 합니다.");
-if (catalog?.publisher !== "Nextbridge") fail("프로그램 발행 주체는 Nextbridge여야 합니다.");
+if (brand?.name !== "Gomdori") fail("브랜드 이름은 Gomdori여야 합니다.");
+if (catalog?.publisher !== "Gomdori") fail("프로그램 발행 주체는 Gomdori여야 합니다.");
 
 const expectedPrograms = [
   ["program-01", "학교 AI 수업"],
@@ -78,7 +78,7 @@ for (const [id, title] of expectedPrograms) {
 
   if (manifest.id !== id) fail(`${id}: manifest id가 다릅니다.`);
   if (manifest.title !== title) fail(`${id}: 공개용 이름이 다릅니다.`);
-  if (manifest.publisher !== "Nextbridge") fail(`${id}: publisher가 다릅니다.`);
+  if (manifest.publisher !== "Gomdori") fail(`${id}: publisher가 다릅니다.`);
   if (manifest.status !== "planning") fail(`${id}: 현재 상태는 planning이어야 합니다.`);
   if (typeof manifest.summary !== "string" || !manifest.summary.trim()) {
     fail(`${id}: 간단한 설명이 필요합니다.`);

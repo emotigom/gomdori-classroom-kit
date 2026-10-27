@@ -25,7 +25,7 @@ function setLanguage(language) {
   }
 
   try {
-    localStorage.setItem("nextbridge-guide-language", nextLanguage);
+    localStorage.setItem("gomdori-guide-language", nextLanguage);
   } catch {
     // The guide remains fully usable when storage is unavailable.
   }
@@ -44,7 +44,7 @@ for (const button of languageButtons) {
 }
 
 try {
-  setLanguage(localStorage.getItem("nextbridge-guide-language") || "ko");
+  setLanguage(localStorage.getItem("gomdori-guide-language") || "ko");
 } catch {
   setLanguage("ko");
 }
