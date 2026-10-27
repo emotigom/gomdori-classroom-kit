@@ -85,5 +85,5 @@ const server = createServer(async (request, response) => {
 server.listen(port, host, () => {
   const address = server.address();
   const actualPort = typeof address === "object" && address ? address.port : port;
-  console.log(`Nextbridge Classroom Kit: http://${host}:${actualPort}/`);
+  console.log(`Gomdori Classroom Kit: http://${host}:${actualPort}/`);
 });
