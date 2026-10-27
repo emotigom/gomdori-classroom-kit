@@ -1,4 +1,4 @@
-# Nextbridge Classroom Kit
+# Gomdori Classroom Kit
 
 공개 가능한 수업 자료를 가볍게 정리해 두는 저장소입니다.
 
@@ -65,7 +65,7 @@ npm run dev
 │   └── program-03/guide/        # 교사용 모바일 워크숍 안내
 ├── go/workshop/                 # QR용 고정 이동 경로
 ├── .github/workflows/pages.yml  # 정적 안내 페이지 배포
-├── config/brand.json            # Nextbridge 브랜드 표기
+├── config/brand.json            # Gomdori 브랜드 표기
 ├── docs/security-boundary.md    # 공개·비공개 경계
 ├── archive/README.md            # 이전 기능을 다시 꺼내는 방법
 ├── scripts/serve.mjs            # 로컬 미리보기
@@ -84,6 +84,6 @@ npm run dev
 
 ## 라이선스
 
-이 저장소의 소프트웨어 코드는 [MIT License](LICENSE)를 따르며 저작권자는 `Nextbridge`입니다.
+이 저장소의 소프트웨어 코드는 [MIT License](LICENSE)를 따릅니다. 현재 저작권 표기와 과거 기록은 Git 이력에서 추적할 수 있습니다.
 
 교안·이미지·상표처럼 코드와 성격이 다른 자료는 공개 범위와 권리를 확인한 뒤 추가합니다.
