@@ -28,6 +28,16 @@ const requiredPaths = [
   ".github/workflows/pages.yml"
 ];
 
+// After a GitHub Pages project rename, keep the workshop redirect relative to
+// the current repository path rather than hard-coding a previous repo slug.
+const workshopRedirect = await readFile(new URL("go/workshop/index.html", root), "utf8");
+const relativeGuide = "../../programs/program-03/guide/";
+if (!workshopRedirect.includes(`content="0; url=${relativeGuide}"`) ||
+    !workshopRedirect.includes(`window.location.replace("${relativeGuide}")`) ||
+    !workshopRedirect.includes(`href="${relativeGuide}"`)) {
+  fail("워크숍 QR 이동 경로는 저장소 이름과 무관한 상대경로여야 합니다.");
+}
+
 for (const path of requiredPaths) {
   try {
     await access(new URL(path, root));
